@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  DropdownMenu,
+  Menu,
+  Option,
+  ToggleButton,
+} from "./components/DropdownButton";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DropdownMenu>
+        <ToggleButton />
+        <Menu>
+          <Option href="https://google.com" target="_blank">
+            Rename
+          </Option>
+          <Option href="https://facebook.com">Delete</Option>
+          <Option>Share</Option>
+        </Menu>
+      </DropdownMenu>
     </div>
   );
 }
